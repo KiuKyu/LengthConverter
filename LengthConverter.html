@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="inputFoot" oninput="footToMeter(this.value)" onchange="footToMeter(this.value)" placeholder="Convert Foot to Meter">
+    <p id="toMeter">Foot to Meter: </p>
+
+    <input type="text" id="inputMeter" oninput="meterToFoot(this.value)" onchange="meterToFoot(this.value)" placeholder="Convert Meter to Foot">
+    <p id="toFoot">Meter To Foot: </p>
+</body>
+<script>
+    function footToMeter(para) {
+        para = parseFloat(para);
+        document.getElementById('toMeter').innerHTML = 'Foot to Meter: ' + (0.305 * para);
+    }
+
+    function meterToFoot(para) {
+        para = parseFloat(para);
+        document.getElementById('toFoot').innerHTML = 'Meter To Foot: ' + (3.279 * para);
+    }
+</script>
+</html>
